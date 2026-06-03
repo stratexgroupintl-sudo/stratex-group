@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nos Pôles — STRATEX Group International</title>
+<meta name="description" content="Les 3 pôles de STRATEX GROUP INTERNATIONAL : Santé & Formation, Immobilier & Services, Performance & Finance.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero" data-screen-label="Nos Pôles">
+    <div class="wrap page-hero__inner">
+      <nav class="crumbs reveal" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="lbl.backHome">Accueil</a><span class="sep">›</span><span data-i18n="nav.poles">Nos Pôles</span>
+      </nav>
+      <span class="eyebrow reveal" data-d="1" style="margin-top:18px"><span data-i18n="nav.poles">Nos Pôles</span></span>
+      <h1 class="reveal" data-d="1" data-i18n="poles.h1">Trois pôles, sept filiales, une exigence.</h1>
+      <p class="lead reveal" data-d="2" data-i18n="poles.lead">Chaque pôle réunit des filiales spécialisées, pilotées avec la même rigueur technique héritée de nos divisions Pharma et Médical.</p>
+    </div>
+  </section>
+
+  <!-- POLE 1 — Santé -->
+  <section class="section" id="sante">
+    <div class="wrap">
+      <div class="pole-head reveal" style="border-top:4px solid var(--blue)">
+        <div class="pole-head__row">
+          <span class="pole-head__hex hex-tile" id="ph1" style="background:var(--blue-wash)"></span>
+          <div>
+            <span class="eyebrow" data-hex="var(--blue)"><span data-i18n="pole.blue.kicker">Pôle 1</span></span>
+            <h2 data-i18n="pole.blue.name">Santé & Formation</h2>
+          </div>
+        </div>
+        <p class="lead" data-i18n="pole.blue.desc">De la représentation pharmaceutique à l'import de consommables et la formation certifiante.</p>
+      </div>
+      <div class="fil-grid" id="grid-blue" style="margin-top:36px"></div>
+    </div>
+  </section>
+
+  <!-- POLE 2 — Immobilier -->
+  <section class="section" id="immobilier" style="background:var(--mist);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="pole-head reveal" style="border-top:4px solid var(--green)">
+        <div class="pole-head__row">
+          <span class="pole-head__hex hex-tile" id="ph2" style="background:var(--green-wash)"></span>
+          <div>
+            <span class="eyebrow" data-hex="var(--green)"><span data-i18n="pole.green.kicker">Pôle 2</span></span>
+            <h2 data-i18n="pole.green.name">Immobilier & Services</h2>
+          </div>
+        </div>
+        <p class="lead" data-i18n="pole.green.desc">Gestion, promotion et construction immobilière, entretien professionnel et logistique.</p>
+      </div>
+      <div class="fil-grid" id="grid-green" style="margin-top:36px"></div>
+    </div>
+  </section>
+
+  <!-- POLE 3 — Performance -->
+  <section class="section" id="performance">
+    <div class="wrap">
+      <div class="pole-head reveal" style="border-top:4px solid var(--orange)">
+        <div class="pole-head__row">
+          <span class="pole-head__hex hex-tile" id="ph3" style="background:var(--orange-wash)"></span>
+          <div>
+            <span class="eyebrow" data-hex="var(--orange)"><span data-i18n="pole.orange.kicker">Pôle 3</span></span>
+            <h2 data-i18n="pole.orange.name">Performance & Finance</h2>
+          </div>
+        </div>
+        <p class="lead" data-i18n="pole.orange.desc">Fournitures et équipements de bureau, transactions et opérations de change sécurisées.</p>
+      </div>
+      <div class="fil-grid" id="grid-orange" style="margin-top:36px"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section--tight" style="background:var(--mist);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div id="ctaBg"></div>
+        <div class="cta-band__inner">
+          <div>
+            <h2 data-i18n="home.cta.title">Un seul interlocuteur pour tous vos besoins.</h2>
+            <p data-i18n="home.cta.sub">Centralisez vos besoins stratégiques auprès d'un partenaire de confiance.</p>
+          </div>
+          <a class="btn btn--light" href="contact.html"><span data-i18n="home.cta.btn">Demander un rendez-vous</span><span id="ctaArr"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  (function () {
+    Object.assign(window.STRATEX_I18N, {
+      'poles.h1': { fr: 'Trois pôles, sept filiales, une exigence.', en: 'Three divisions, seven subsidiaries, one standard.' },
+      'poles.lead': { fr: "Chaque pôle réunit des filiales spécialisées, pilotées avec la même rigueur technique héritée de nos divisions Pharma et Médical.", en: 'Each division brings together specialised subsidiaries, run with the same technical rigour inherited from our Pharma and Medical operations.' }
+    });
+
+    [['ph1','var(--blue)'],['ph2','var(--green)'],['ph3','var(--orange)']].forEach(function (a) {
+      document.getElementById(a[0]).innerHTML = STRATEX.hexIcon(a[1]);
+    });
+    ['blue','green','orange'].forEach(function (pole) {
+      document.getElementById('grid-' + pole).innerHTML = STRATEX.filiales
+        .filter(function (f) { return f.pole === pole; })
+        .map(function (f) { return STRATEX.filCard(f, ''); }).join('');
+    });
+    var cb = document.getElementById('ctaBg'); cb.style.cssText = 'position:absolute;inset:0;opacity:.5;background-image:' + STRATEX.honeycomb('#FFFFFF', 0.05);
+    document.getElementById('ctaArr').innerHTML = STRATEX.arrow;
+
+    STRATEX.mount({ active: 'poles' });
+
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
+    document.querySelectorAll('.fil-grid .reveal').forEach(function (el) { io.observe(el); });
+    (function rv(){var vh=innerHeight||800;document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top<vh*0.92)el.classList.add('in');});})();
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stratex Médical — STRATEX Group International</title>
+<meta name="description" content="Import-Export de Consommables Médicaux — L'exigence de la qualité pour les équipements de santé.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<main>
+  <section class="fil-hero" id="filHero" data-screen-label="Stratex Médical">
+    <div class="wrap fil-hero__inner">
+      <div>
+        <nav class="crumbs reveal" aria-label="Fil d'Ariane">
+          <a href="../index.html" data-i18n="lbl.backHome">Accueil</a>
+          <span class="sep">›</span>
+          <a href="../index.html#filiales" data-i18n="lbl.allSubs">Toutes les filiales</a>
+          <span class="sep">›</span>
+          <span>Stratex Médical</span>
+        </nav>
+        <span class="fil-badge reveal" data-d="1"><span class="hex-tile" id="filBadge"></span><span data-i18n="fp.sub">Import-Export de Consommables Médicaux</span></span>
+        <h1 class="reveal" data-d="1">Stratex Médical</h1>
+        <p class="fil-hero__slogan reveal" data-d="2" data-i18n="fp.slogan">L'exigence de la qualité pour les équipements de santé.</p>
+        <p class="fil-hero__desc lead reveal" data-d="2" data-i18n="fp.desc">Spécialiste du négoce international et de la logistique médicale, Stratex Médical approvisionne officines et hôpitaux en équipements et consommables conformes aux normes internationales.</p>
+        <div class="hero__cta reveal" data-d="3">
+          <a class="btn" id="filContact" href="../contact.html"><span data-i18n="lbl.contactSub">Contacter cette filiale</span></a>
+          <a class="btn btn--ghost" href="../nos-poles.html"><span data-i18n="nav.poles">Nos Pôles</span></a>
+        </div>
+      </div>
+      <div class="reveal" data-d="2">
+        <div class="media media--tall" id="filMedia">
+          <div class="media__pattern" id="filPattern"></div>
+          <span class="hex-tile" id="filBig" style="width:120px;height:138px;position:relative;z-index:1"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" id="axEyebrow"><span data-i18n="lbl.axes">Axes d'intervention</span></span>
+        <h2 data-i18n="fp.sub">Import-Export de Consommables Médicaux</h2>
+      </div>
+      <div class="axes">
+          <div class="axis reveal" data-d="1"><div class="axis__n">01</div><h3 data-i18n="fp.ax0.t">Consommables médicaux</h3><p data-i18n="fp.ax0.d">Consommables courants et de spécialité pour les structures de santé.</p></div>
+          <div class="axis reveal" data-d="2"><div class="axis__n">02</div><h3 data-i18n="fp.ax1.t">EPI & instrumentation</h3><p data-i18n="fp.ax1.d">Équipements de protection individuelle et instrumentation médicale.</p></div>
+          <div class="axis reveal" data-d="3"><div class="axis__n">03</div><h3 data-i18n="fp.ax2.t">Chaîne logistique</h3><p data-i18n="fp.ax2.d">Gestion de la chaîne logistique pour officines et hôpitaux.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="background:var(--mist);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:30px">
+        <span class="eyebrow" id="otherEyebrow"><span data-i18n="lbl.otherSubs">Autres filiales</span></span>
+      </div>
+      <div class="fil-nav reveal" id="otherSubs"></div>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div id="ctaBg"></div>
+        <div class="cta-band__inner">
+          <div>
+            <h2 data-i18n="home.cta.title">Un seul interlocuteur pour tous vos besoins.</h2>
+            <p data-i18n="home.cta.sub">Centralisez vos besoins stratégiques auprès d'un partenaire de confiance.</p>
+          </div>
+          <a class="btn btn--light" href="../contact.html"><span data-i18n="home.cta.btn">Demander un rendez-vous</span><span id="ctaArr"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="../assets/i18n.js"></script>
+<script src="../assets/site.js"></script>
+<script>
+  (function(){
+    Object.assign(window.STRATEX_I18N, {"fp.sub":{"fr":"Import-Export de Consommables Médicaux","en":"Import-Export of Medical Supplies"},"fp.slogan":{"fr":"L'exigence de la qualité pour les équipements de santé.","en":"A commitment to quality for healthcare equipment."},"fp.desc":{"fr":"Spécialiste du négoce international et de la logistique médicale, Stratex Médical approvisionne officines et hôpitaux en équipements et consommables conformes aux normes internationales.","en":"A specialist in international trade and medical logistics, Stratex Médical supplies pharmacies and hospitals with equipment and consumables that meet international standards."},"fp.ax0.t":{"fr":"Consommables médicaux","en":"Medical consumables"},"fp.ax0.d":{"fr":"Consommables courants et de spécialité pour les structures de santé.","en":"Everyday and specialised consumables for healthcare facilities."},"fp.ax1.t":{"fr":"EPI & instrumentation","en":"PPE & instrumentation"},"fp.ax1.d":{"fr":"Équipements de protection individuelle et instrumentation médicale.","en":"Personal protective equipment and medical instrumentation."},"fp.ax2.t":{"fr":"Chaîne logistique","en":"Supply chain"},"fp.ax2.d":{"fr":"Gestion de la chaîne logistique pour officines et hôpitaux.","en":"Supply-chain management for pharmacies and hospitals."}});
+    var f = STRATEX.filBySlug('stratex-medical');
+    var C = f.color, CT = STRATEX.accentText(C), OC = STRATEX.onColor(C), WASH = STRATEX.tint(C, 0.86);
+
+    var hero = document.getElementById('filHero');
+    hero.style.setProperty('--c', C); hero.style.setProperty('--ct', CT); hero.style.setProperty('--wash', WASH);
+
+    var badge = document.getElementById('filBadge'); badge.style.background = C; badge.innerHTML = STRATEX.hexIcon(OC);
+    var big = document.getElementById('filBig'); big.style.background = C; big.style.display='grid'; big.style.placeItems='center';
+    big.innerHTML = '<svg viewBox="0 0 24 28" style="width:42%;height:42%" aria-hidden="true"><polygon points="12,1 23,7.5 23,20.5 12,27 1,20.5 1,7.5" fill="'+OC+'"/></svg>';
+    document.getElementById('filMedia').style.borderColor = WASH;
+    var btn = document.getElementById('filContact'); btn.style.setProperty('--bg', C); btn.style.setProperty('--bd', C); btn.style.setProperty('--fg', OC);
+    document.getElementById('axEyebrow').insertAdjacentHTML('afterbegin', STRATEX.hexIcon(CT));
+    document.getElementById('otherEyebrow').insertAdjacentHTML('afterbegin', STRATEX.hexIcon(CT));
+    document.getElementById('ctaArr').innerHTML = STRATEX.arrow;
+    var fp = document.getElementById('filPattern'); fp.style.backgroundImage = STRATEX.honeycomb('#1C2530', 0.08); fp.style.backgroundColor='#EEF2F6';
+    var cb = document.getElementById('ctaBg'); cb.style.cssText='position:absolute;inset:0;opacity:.5;background-image:'+STRATEX.honeycomb('#FFFFFF',0.05);
+
+    document.getElementById('otherSubs').innerHTML = STRATEX.filiales.filter(function(x){return x.slug!=='stratex-medical';}).map(function(x){
+      return '<a class="fil-chip" href="'+x.slug+'.html"><span class="dot" style="background:'+x.color+'"></span>'+x.name+'</a>';
+    }).join('');
+
+    STRATEX.mount({ active:'filiales', base:'../' });
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    (function rv(){var vh=innerHeight||800;document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top<vh*0.92)el.classList.add('in');});})();
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — STRATEX Group International</title>
+<meta name="description" content="Contactez STRATEX GROUP INTERNATIONAL à Cotonou, Bénin. Un seul interlocuteur pour tous vos besoins.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero" data-screen-label="Contact">
+    <div class="wrap page-hero__inner">
+      <nav class="crumbs reveal" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="lbl.backHome">Accueil</a><span class="sep">›</span><span data-i18n="nav.contact">Contact</span>
+      </nav>
+      <span class="eyebrow reveal" data-d="1" style="margin-top:18px"><span data-i18n="nav.contact">Contact</span></span>
+      <h1 class="reveal" data-d="1" data-i18n="contact.h1">Parlons de vos besoins.</h1>
+      <p class="lead reveal" data-d="2" data-i18n="contact.lead">Un seul interlocuteur pour tous vos besoins stratégiques. Écrivez-nous et nos équipes vous répondent au plus vite.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-grid">
+      <!-- FORM -->
+      <form class="reveal" id="contactForm" novalidate>
+        <div class="field--row">
+          <div class="field">
+            <label for="fn" data-i18n="contact.f.name">Nom complet</label>
+            <input id="fn" name="name" type="text" required data-i18n-ph="contact.ph.name" placeholder="Votre nom">
+          </div>
+          <div class="field">
+            <label for="fo" data-i18n="contact.f.org">Organisation</label>
+            <input id="fo" name="org" type="text" data-i18n-ph="contact.ph.org" placeholder="Laboratoire, hôpital, entreprise…">
+          </div>
+        </div>
+        <div class="field--row">
+          <div class="field">
+            <label for="fe" data-i18n="contact.f.email">Email</label>
+            <input id="fe" name="email" type="email" required placeholder="nom@exemple.com">
+          </div>
+          <div class="field">
+            <label for="fp" data-i18n="contact.f.phone">Téléphone</label>
+            <input id="fp" name="phone" type="tel" placeholder="+229 …">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fs" data-i18n="contact.f.subject">Sujet</label>
+          <select id="fs" name="subject">
+            <option data-i18n="contact.opt.1">Pôle Santé & Formation</option>
+            <option data-i18n="contact.opt.2">Pôle Immobilier & Services</option>
+            <option data-i18n="contact.opt.3">Pôle Performance & Finance</option>
+            <option data-i18n="contact.opt.4">Stratex Academy — inscription</option>
+            <option data-i18n="contact.opt.5">Autre demande</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fm" data-i18n="contact.f.msg">Message</label>
+          <textarea id="fm" name="message" data-i18n-ph="contact.ph.msg" placeholder="Décrivez votre besoin…"></textarea>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit"><span data-i18n="contact.send">Envoyer la demande</span><span id="sendArr"></span></button>
+        <p id="formNote" style="margin-top:14px;font-size:14px;color:var(--slate);display:none" data-i18n="contact.note">Merci — votre messagerie va s'ouvrir avec la demande pré-remplie. Cliquez sur « Envoyer » dans votre application mail pour finaliser.sage.</p>
+      </form>
+
+      <!-- INFO -->
+      <aside class="contact-info reveal" data-d="1">
+        <h3 data-i18n="contact.info.title">Coordonnées</h3>
+        <ul class="ci-list">
+          <li><span class="ci-ic" id="ic-pin"></span><div><div class="ci-k" data-i18n="contact.info.addr">Adresse</div><div class="ci-v">Lot 299 M/Lalokoun Abdoul-Kader,<br>Agbalilamé, Akpakpa, Cotonou, BÉNIN</div></div></li>
+          <li><span class="ci-ic" id="ic-phone"></span><div><div class="ci-k" data-i18n="contact.info.phone">Téléphone</div><div class="ci-v">+229 01 41 76 76 41<br>+229 01 96 00 08 82</div></div></li>
+          <li><span class="ci-ic" id="ic-mail"></span><div><div class="ci-k" data-i18n="contact.info.email">Email</div><div class="ci-v">info.stratexgroup@gmail.com</div></div></li>
+        </ul>
+        <div class="map-ph">
+          <iframe
+            title="STRATEX Group INTL — Cotonou, Bénin"
+            src="https://maps.google.com/maps?q=6.3813125,2.4951875&z=16&hl=fr&output=embed"
+            style="position:absolute;inset:0;width:100%;height:100%;border:0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <a class="map-cta"
+             href="https://www.google.com/maps/dir/?api=1&destination=6.3813125%2C2.4951875"
+             target="_blank" rel="noopener"
+             data-i18n="contact.directions">Itinéraire ↗</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  (function () {
+    Object.assign(window.STRATEX_I18N, {
+      'contact.h1': { fr: 'Parlons de vos besoins.', en: 'Let’s talk about your needs.' },
+      'contact.lead': { fr: "Un seul interlocuteur pour tous vos besoins stratégiques. Écrivez-nous et nos équipes vous répondent au plus vite.", en: 'A single point of contact for all your strategic needs. Write to us and our teams will respond promptly.' },
+      'contact.f.name': { fr: 'Nom complet', en: 'Full name' },
+      'contact.ph.name': { fr: 'Votre nom', en: 'Your name' },
+      'contact.f.org': { fr: 'Organisation', en: 'Organisation' },
+      'contact.ph.org': { fr: 'Laboratoire, hôpital, entreprise…', en: 'Laboratory, hospital, company…' },
+      'contact.f.email': { fr: 'Email', en: 'Email' },
+      'contact.f.phone': { fr: 'Téléphone', en: 'Phone' },
+      'contact.f.subject': { fr: 'Sujet', en: 'Subject' },
+      'contact.opt.1': { fr: 'Pôle Santé & Formation', en: 'Health & Training division' },
+      'contact.opt.2': { fr: 'Pôle Immobilier & Services', en: 'Real Estate & Services division' },
+      'contact.opt.3': { fr: 'Pôle Performance & Finance', en: 'Performance & Finance division' },
+      'contact.opt.4': { fr: 'Stratex Academy — inscription', en: 'Stratex Academy — enrolment' },
+      'contact.opt.5': { fr: 'Autre demande', en: 'Other enquiry' },
+      'contact.f.msg': { fr: 'Message', en: 'Message' },
+      'contact.ph.msg': { fr: 'Décrivez votre besoin…', en: 'Describe your need…' },
+      'contact.send': { fr: 'Envoyer la demande', en: 'Send request' },
+      'contact.note': { fr: "Merci — votre messagerie va s'ouvrir avec la demande pré-remplie. Cliquez sur « Envoyer » dans votre application mail pour finaliser.", en: 'Thank you — your email app will open with the request pre-filled. Click “Send” in your mail app to finish.' },
+      'contact.info.title': { fr: 'Coordonnées', en: 'Get in touch' },
+      'contact.info.addr': { fr: 'Adresse', en: 'Address' },
+      'contact.info.phone': { fr: 'Téléphone', en: 'Phone' },
+      'contact.info.email': { fr: 'Email', en: 'Email' },
+      'contact.map': { fr: 'Carte — Cotonou, Bénin', en: 'Map — Cotonou, Benin' },
+      'contact.directions': { fr: 'Itinéraire ↗', en: 'Directions ↗' }
+    });
+
+    document.getElementById('ic-pin').innerHTML = STRATEX.ic('pin');
+    document.getElementById('ic-phone').innerHTML = STRATEX.ic('phone');
+    document.getElementById('ic-mail').innerHTML = STRATEX.ic('mail');
+    document.getElementById('sendArr').innerHTML = STRATEX.arrow;
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var lang = document.documentElement.lang || 'fr';
+      var msgs = {
+        fr: {
+          sending: 'Envoi en cours…',
+          ok: 'Merci — votre demande a bien été envoyée. Nous vous répondrons rapidement.',
+          err: "Une erreur est survenue. Réessayez ou écrivez-nous directement à info.stratexgroup@gmail.com.",
+          send: 'Envoyer la demande'
+        },
+        en: {
+          sending: 'Sending…',
+          ok: 'Thank you — your request has been sent. We will get back to you shortly.',
+          err: 'Something went wrong. Please try again or email us at info.stratexgroup@gmail.com.',
+          send: 'Send request'
+        }
+      };
+      var t = msgs[lang] || msgs.fr;
+      var note = document.getElementById('formNote');
+      var btn = f.querySelector('button[type="submit"]');
+      var btnLabel = btn.querySelector('span');
+
+      var topic = f.elements['subject'] ? f.elements['subject'].value : '';
+      var data = new FormData(f);
+      data.append('_subject', 'Demande STRATEX · ' + topic);
+      data.append('_template', 'table');
+      data.append('_captcha', 'false');
+
+      btn.disabled = true;
+      if (btnLabel) btnLabel.textContent = t.sending;
+      note.style.display = 'block';
+      note.style.color = 'var(--slate)';
+      note.textContent = t.sending;
+
+      fetch('https://formsubmit.co/ajax/info.stratexgroup@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+      .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+      .then(function () {
+        note.textContent = t.ok;
+        note.style.color = 'var(--green, #2e8b57)';
+        f.reset();
+      })
+      .catch(function () {
+        note.textContent = t.err;
+        note.style.color = '#c0392b';
+      })
+      .finally(function () {
+        btn.disabled = false;
+        if (btnLabel) btnLabel.textContent = t.send;
+      });
+    });
+
+    STRATEX.mount({ active: 'contact' });
+    (function rv(){var vh=innerHeight||800;document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top<vh*0.92)el.classList.add('in');});})();
+  })();
+</script>
+</body>
+</html>

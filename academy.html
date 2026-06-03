@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academy — STRATEX Group International</title>
+<meta name="description" content="Stratex Academy — formations santé certifiantes et coaching entrepreneurial à Cotonou.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero" data-screen-label="Academy">
+    <div class="wrap page-hero__inner">
+      <nav class="crumbs reveal" aria-label="Fil d'Ariane">
+        <a href="index.html" data-i18n="lbl.backHome">Accueil</a><span class="sep">›</span><span data-i18n="nav.academy">Academy</span>
+      </nav>
+      <span class="eyebrow reveal" data-d="1" style="margin-top:18px"><span data-i18n="acad.eyebrow">Stratex Academy</span></span>
+      <h1 class="reveal" data-d="1" data-i18n="acad.h1">Révéler les talents, propulser les carrières.</h1>
+      <p class="lead reveal" data-d="2" data-i18n="acad.lead">Stratex Academy forme les professionnels de santé de demain et accompagne les entrepreneurs à travers des cursus certifiants et un coaching sur mesure.</p>
+      <div class="hero__cta reveal" data-d="3">
+        <a class="btn btn--primary" href="#cursus"><span data-i18n="acad.cta1">Voir les cursus</span></a>
+        <a class="btn btn--ghost" href="contact.html"><span data-i18n="acad.cta2">Demander une inscription</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSUS -->
+  <section class="section" id="cursus">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span data-i18n="acad.cursus.eyebrow">Nos cursus certifiants</span></span>
+        <h2 data-i18n="acad.cursus.title">Des formations ancrées dans la pratique.</h2>
+      </div>
+      <div class="cursus" id="cursusGrid"></div>
+    </div>
+  </section>
+
+  <!-- INSCRIPTION CTA -->
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div id="ctaBg"></div>
+        <div class="cta-band__inner">
+          <div>
+            <h2 data-i18n="acad.enroll.title">Prêt à lancer votre parcours ?</h2>
+            <p data-i18n="acad.enroll.sub">Les inscriptions sont ouvertes. Contactez nos conseillers pour construire votre cursus.</p>
+          </div>
+          <a class="btn btn--light" href="contact.html"><span data-i18n="acad.enroll.btn">S'inscrire maintenant</span><span id="ctaArr"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  (function () {
+    Object.assign(window.STRATEX_I18N, {
+      'acad.eyebrow': { fr: 'Stratex Academy', en: 'Stratex Academy' },
+      'acad.h1': { fr: 'Révéler les talents, propulser les carrières.', en: 'Revealing talent, propelling careers.' },
+      'acad.lead': { fr: "Stratex Academy forme les professionnels de santé de demain et accompagne les entrepreneurs à travers des cursus certifiants et un coaching sur mesure.", en: 'Stratex Academy trains tomorrow’s healthcare professionals and supports entrepreneurs through certified programmes and tailored coaching.' },
+      'acad.cta1': { fr: 'Voir les cursus', en: 'View programmes' },
+      'acad.cta2': { fr: 'Demander une inscription', en: 'Request enrolment' },
+      'acad.cursus.eyebrow': { fr: 'Nos cursus certifiants', en: 'Our certified programmes' },
+      'acad.cursus.title': { fr: 'Des formations ancrées dans la pratique.', en: 'Training grounded in practice.' },
+      'acad.enroll.title': { fr: 'Prêt à lancer votre parcours ?', en: 'Ready to start your journey?' },
+      'acad.enroll.sub': { fr: 'Les inscriptions sont ouvertes. Contactez nos conseillers pour construire votre cursus.', en: 'Enrolment is open. Contact our advisors to build your programme.' },
+      'acad.enroll.btn': { fr: "S'inscrire maintenant", en: 'Enrol now' }
+    });
+
+    var cursus = [
+      { tag: { fr: 'Santé', en: 'Health' }, t: { fr: 'Auxiliaire de Pharmacie', en: 'Pharmacy Assistant' }, d: { fr: "Cursus certifiant pour exercer en officine et en structure de santé.", en: 'Certified programme to work in pharmacies and healthcare facilities.' } },
+      { tag: { fr: 'Santé', en: 'Health' }, t: { fr: 'Assistant(e) en Secrétariat Médical', en: 'Medical Secretariat Assistant' }, d: { fr: "Maîtrise de l'accueil, de la gestion des dossiers et de l'organisation médicale.", en: 'Mastering reception, records management and medical organisation.' } },
+      { tag: { fr: 'Santé', en: 'Health' }, t: { fr: 'Délégué Médical', en: 'Medical Representative' }, d: { fr: "Du terrain à la relation laboratoire : les clés du métier de délégué.", en: 'From field work to laboratory relations: the keys to the representative’s craft.' } },
+      { tag: { fr: 'Business', en: 'Business' }, t: { fr: 'Coaching en Entrepreneuriat', en: 'Entrepreneurship Coaching' }, d: { fr: "Structurer, financer et faire grandir son activité avec un accompagnement sur mesure.", en: 'Structure, fund and grow your business with tailored support.' } }
+    ];
+    document.getElementById('cursusGrid').innerHTML = cursus.map(function (c, i) {
+      return '<div class="course reveal" data-d="' + ((i % 2) + 1) + '">' +
+        '<span class="course__hex hex-tile" style="background:var(--blue-wash)">' + STRATEX.hexIcon('var(--blue)') + '</span>' +
+        '<div><span class="course__tag">' + c.tag.fr + '</span>' +
+        '<h3 data-i18n="cur' + i + '.t">' + c.t.fr + '</h3>' +
+        '<p data-i18n="cur' + i + '.d">' + c.d.fr + '</p></div></div>';
+    }).join('');
+    cursus.forEach(function (c, i) { window.STRATEX_I18N['cur' + i + '.t'] = c.t; window.STRATEX_I18N['cur' + i + '.d'] = c.d; });
+
+    var cb = document.getElementById('ctaBg'); cb.style.cssText = 'position:absolute;inset:0;opacity:.5;background-image:' + STRATEX.honeycomb('#FFFFFF', 0.05);
+    document.getElementById('ctaArr').innerHTML = STRATEX.arrow;
+
+    STRATEX.mount({ active: 'academy' });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
+    document.querySelectorAll('.course.reveal').forEach(function (el) { io.observe(el); });
+    (function rv(){var vh=innerHeight||800;document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top<vh*0.92)el.classList.add('in');});})();
+  })();
+</script>
+</body>
+</html>

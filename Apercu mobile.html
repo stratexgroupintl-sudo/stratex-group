@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STRATEX — Aperçu mobile</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Manrope:wght@400;500;600&display=swap');
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #EEF1F5; font-family: 'Manrope', system-ui, sans-serif; color: #1C2530; }
+  .page { max-width: 1180px; margin-inline: auto; padding: clamp(28px, 5vw, 64px) clamp(18px, 4vw, 40px) 80px; }
+  .head { text-align: center; margin-bottom: clamp(30px, 5vw, 56px); }
+  .head .brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .head .brand svg { width: 34px; height: 34px; }
+  .head .brand span { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: .02em; font-size: 18px; }
+  .head h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin: 0 0 12px; letter-spacing: -.02em; }
+  .head p { color: #5A6470; font-size: 16px; max-width: 56ch; margin-inline: auto; line-height: 1.6; }
+  .hint { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 13.5px; color: #2BA6E8; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; }
+
+  .rail { display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 52px); justify-content: center; align-items: flex-start; }
+  .phone { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .phone__scaler { position: relative; }
+  .phone__cap { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; }
+  .phone__sub { color: #8A929D; font-size: 13px; margin-top: -10px; }
+  .phone__badge { display: inline-flex; align-items: center; gap: 7px; }
+  .phone__badge .dot { width: 9px; height: 9px; border-radius: 999px; }
+  iframe { border: 0; background: #fff; display: block; }
+  .foot { text-align: center; color: #8A929D; font-size: 13px; margin-top: 56px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div class="brand" id="brandSlot"></div>
+    <h1>Aperçu mobile</h1>
+    <p>Les pages réelles du site, affichées dans un téléphone. Le menu passe en « hamburger », les cartes s'empilent et les boutons deviennent pleine largeur — exactement le rendu sur smartphone.</p>
+    <div class="hint">↻ Les écrans sont interactifs : faites défiler et ouvrez le menu</div>
+  </div>
+  <div class="rail" id="rail"></div>
+  <div class="foot">STRATEX Group International — maquette responsive · défilez à l'intérieur de chaque téléphone</div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel">
+  const SCALE = 0.64;
+  const W = 402, H = 874;
+
+  // brand mark (matches the site logo)
+  function flatHex(cx, cy, r) {
+    var s = 0.8660254 * r;
+    return [[cx+r,cy],[cx+r/2,cy+s],[cx-r/2,cy+s],[cx-r,cy],[cx-r/2,cy-s],[cx+r/2,cy-s]]
+      .map(p => p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+  }
+  const LOGO = (
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points={flatHex(78,22,22)} fill="#2BA6E8"/>
+      <polygon points={flatHex(43,48,17.3)} fill="#7AC143"/>
+      <polygon points={flatHex(13.5,70,12.7)} fill="#F2843C"/>
+      <polygon points={flatHex(43,84,16.7)} fill="#F7B500"/>
+    </svg>
+  );
+  ReactDOM.createRoot(document.getElementById('brandSlot')).render(<>{LOGO}<span>STRATEX</span></>);
+
+  const SCREENS = [
+    { src: 'index.html', cap: 'Accueil', sub: 'Hero, pôles & filiales', color: '#2BA6E8' },
+    { src: 'filiales/stratex-pharma.html', cap: 'Page filiale', sub: 'Stratex Pharma', color: '#7AC143' },
+    { src: 'contact.html', cap: 'Contact', sub: 'Formulaire & coordonnées', color: '#F2843C' }
+  ];
+
+  function Phone({ s }) {
+    return (
+      <div className="phone">
+        <div className="phone__scaler" style={{ zoom: SCALE }}>
+          <IOSDevice>
+            <div style={{ height: '100%', paddingTop: 50, paddingBottom: 14, boxSizing: 'border-box' }}>
+              <iframe src={s.src} title={s.cap} style={{ width: '100%', height: '100%' }} scrolling="yes" />
+            </div>
+          </IOSDevice>
+        </div>
+        <div style={{ textAlign: 'center' }}>
+          <div className="phone__cap phone__badge"><span className="dot" style={{ background: s.color }}></span>{s.cap}</div>
+          <div className="phone__sub">{s.sub}</div>
+        </div>
+      </div>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('rail')).render(
+    <>{SCREENS.map((s, i) => <Phone key={i} s={s} />)}</>
+  );
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stratex Pharma — STRATEX Group International</title>
+<meta name="description" content="Représentation & Promotion Pharmaceutique — Votre partenaire stratégique en développement pharmaceutique.">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div id="header-slot"></div>
+
+<main>
+  <section class="fil-hero" id="filHero" data-screen-label="Stratex Pharma">
+    <div class="wrap fil-hero__inner">
+      <div>
+        <nav class="crumbs reveal" aria-label="Fil d'Ariane">
+          <a href="../index.html" data-i18n="lbl.backHome">Accueil</a>
+          <span class="sep">›</span>
+          <a href="../index.html#filiales" data-i18n="lbl.allSubs">Toutes les filiales</a>
+          <span class="sep">›</span>
+          <span>Stratex Pharma</span>
+        </nav>
+        <span class="fil-badge reveal" data-d="1"><span class="hex-tile" id="filBadge"></span><span data-i18n="fp.sub">Représentation & Promotion Pharmaceutique</span></span>
+        <h1 class="reveal" data-d="1">Stratex Pharma</h1>
+        <p class="fil-hero__slogan reveal" data-d="2" data-i18n="fp.slogan">Votre partenaire stratégique en développement pharmaceutique.</p>
+        <p class="fil-hero__desc lead reveal" data-d="2" data-i18n="fp.desc">Interface entre laboratoires internationaux et acteurs locaux, Stratex Pharma assure le déploiement réglementaire, la mise sur le marché et la promotion éthique des spécialités pharmaceutiques.</p>
+        <div class="hero__cta reveal" data-d="3">
+          <a class="btn" id="filContact" href="../contact.html"><span data-i18n="lbl.contactSub">Contacter cette filiale</span></a>
+          <a class="btn btn--ghost" href="../nos-poles.html"><span data-i18n="nav.poles">Nos Pôles</span></a>
+        </div>
+      </div>
+      <div class="reveal" data-d="2">
+        <div class="media media--tall" id="filMedia">
+          <div class="media__pattern" id="filPattern"></div>
+          <span class="hex-tile" id="filBig" style="width:120px;height:138px;position:relative;z-index:1"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" id="axEyebrow"><span data-i18n="lbl.axes">Axes d'intervention</span></span>
+        <h2 data-i18n="fp.sub">Représentation & Promotion Pharmaceutique</h2>
+      </div>
+      <div class="axes">
+          <div class="axis reveal" data-d="1"><div class="axis__n">01</div><h3 data-i18n="fp.ax0.t">Représentation & enregistrement</h3><p data-i18n="fp.ax0.d">Représentation et enregistrement de spécialités pharmaceutiques auprès des autorités compétentes.</p></div>
+          <div class="axis reveal" data-d="2"><div class="axis__n">02</div><h3 data-i18n="fp.ax1.t">Promotion médicale ciblée</h3><p data-i18n="fp.ax1.d">Campagnes de promotion médicale ciblées, conduites selon les standards éthiques du secteur.</p></div>
+          <div class="axis reveal" data-d="3"><div class="axis__n">03</div><h3 data-i18n="fp.ax2.t">Veille & pharmacovigilance</h3><p data-i18n="fp.ax2.d">Veille scientifique, pharmacovigilance et animation des réseaux de distribution.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="background:var(--mist);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:30px">
+        <span class="eyebrow" id="otherEyebrow"><span data-i18n="lbl.otherSubs">Autres filiales</span></span>
+      </div>
+      <div class="fil-nav reveal" id="otherSubs"></div>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div id="ctaBg"></div>
+        <div class="cta-band__inner">
+          <div>
+            <h2 data-i18n="home.cta.title">Un seul interlocuteur pour tous vos besoins.</h2>
+            <p data-i18n="home.cta.sub">Centralisez vos besoins stratégiques auprès d'un partenaire de confiance.</p>
+          </div>
+          <a class="btn btn--light" href="../contact.html"><span data-i18n="home.cta.btn">Demander un rendez-vous</span><span id="ctaArr"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="../assets/i18n.js"></script>
+<script src="../assets/site.js"></script>
+<script>
+  (function(){
+    Object.assign(window.STRATEX_I18N, {"fp.sub":{"fr":"Représentation & Promotion Pharmaceutique","en":"Pharmaceutical Representation & Promotion"},"fp.slogan":{"fr":"Votre partenaire stratégique en développement pharmaceutique.","en":"Your strategic partner in pharmaceutical development."},"fp.desc":{"fr":"Interface entre laboratoires internationaux et acteurs locaux, Stratex Pharma assure le déploiement réglementaire, la mise sur le marché et la promotion éthique des spécialités pharmaceutiques.","en":"As the interface between international laboratories and local players, Stratex Pharma handles regulatory deployment, market access and the ethical promotion of pharmaceutical specialities."},"fp.ax0.t":{"fr":"Représentation & enregistrement","en":"Representation & registration"},"fp.ax0.d":{"fr":"Représentation et enregistrement de spécialités pharmaceutiques auprès des autorités compétentes.","en":"Representation and registration of pharmaceutical specialities with the relevant authorities."},"fp.ax1.t":{"fr":"Promotion médicale ciblée","en":"Targeted medical promotion"},"fp.ax1.d":{"fr":"Campagnes de promotion médicale ciblées, conduites selon les standards éthiques du secteur.","en":"Targeted medical promotion campaigns, conducted to the sector’s ethical standards."},"fp.ax2.t":{"fr":"Veille & pharmacovigilance","en":"Monitoring & pharmacovigilance"},"fp.ax2.d":{"fr":"Veille scientifique, pharmacovigilance et animation des réseaux de distribution.","en":"Scientific monitoring, pharmacovigilance and management of distribution networks."}});
+    var f = STRATEX.filBySlug('stratex-pharma');
+    var C = f.color, CT = STRATEX.accentText(C), OC = STRATEX.onColor(C), WASH = STRATEX.tint(C, 0.86);
+
+    var hero = document.getElementById('filHero');
+    hero.style.setProperty('--c', C); hero.style.setProperty('--ct', CT); hero.style.setProperty('--wash', WASH);
+
+    var badge = document.getElementById('filBadge'); badge.style.background = C; badge.innerHTML = STRATEX.hexIcon(OC);
+    var big = document.getElementById('filBig'); big.style.background = C; big.style.display='grid'; big.style.placeItems='center';
+    big.innerHTML = '<svg viewBox="0 0 24 28" style="width:42%;height:42%" aria-hidden="true"><polygon points="12,1 23,7.5 23,20.5 12,27 1,20.5 1,7.5" fill="'+OC+'"/></svg>';
+    document.getElementById('filMedia').style.borderColor = WASH;
+    var btn = document.getElementById('filContact'); btn.style.setProperty('--bg', C); btn.style.setProperty('--bd', C); btn.style.setProperty('--fg', OC);
+    document.getElementById('axEyebrow').insertAdjacentHTML('afterbegin', STRATEX.hexIcon(CT));
+    document.getElementById('otherEyebrow').insertAdjacentHTML('afterbegin', STRATEX.hexIcon(CT));
+    document.getElementById('ctaArr').innerHTML = STRATEX.arrow;
+    var fp = document.getElementById('filPattern'); fp.style.backgroundImage = STRATEX.honeycomb('#1C2530', 0.08); fp.style.backgroundColor='#EEF2F6';
+    var cb = document.getElementById('ctaBg'); cb.style.cssText='position:absolute;inset:0;opacity:.5;background-image:'+STRATEX.honeycomb('#FFFFFF',0.05);
+
+    document.getElementById('otherSubs').innerHTML = STRATEX.filiales.filter(function(x){return x.slug!=='stratex-pharma';}).map(function(x){
+      return '<a class="fil-chip" href="'+x.slug+'.html"><span class="dot" style="background:'+x.color+'"></span>'+x.name+'</a>';
+    }).join('');
+
+    STRATEX.mount({ active:'filiales', base:'../' });
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    (function rv(){var vh=innerHeight||800;document.querySelectorAll('.reveal:not(.in)').forEach(function(el){if(el.getBoundingClientRect().top<vh*0.92)el.classList.add('in');});})();
+  })();
+</script>
+</body>
+</html>
